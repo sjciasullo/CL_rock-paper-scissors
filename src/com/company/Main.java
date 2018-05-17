@@ -15,6 +15,10 @@ public class Main {
         player1.printWinCount();
         player2.printWinCount();
 
+        GameState gameState = new GameState(1);
+        gameState.getNumPlayers();
+        gameState.setNumPlayers(2);
+        gameState.getNumPlayers();
 
     }
 }
