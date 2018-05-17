@@ -50,6 +50,7 @@ public class Player {
         winCount++;
     }
 
+    // random move for computer and invalid move input
     public void makeRandomMove(){
         Random randGen = new Random();
         final int RANDOM = randGen.nextInt(3);
