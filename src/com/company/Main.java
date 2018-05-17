@@ -9,6 +9,10 @@ public class Main {
         System.out.println("player2's name is: " + player2.getName());
         player1.setCurrentMove("rock");
         player2.setCurrentMove("asdf");
-        player2.setCurrentMove("rOCk");
+        player2.setCurrentMove("rOCk"); // false, so handle case sensitivity when it comes in
+        player1.incrementWins();
+        System.out.println("Score is . . .");
+        player1.printWinCount();
+        player2.printWinCount();
     }
 }
