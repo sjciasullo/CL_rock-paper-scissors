@@ -9,8 +9,9 @@
 ### Approach
 1. Create Player Class
     - Player
-      - isComputer
       - String Name
+      - win count
+      - currentMove
 2. GameState Object 
     - Game History structure
       - addHistory(String)
