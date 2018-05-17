@@ -16,6 +16,7 @@
     - Game History structure
       - addHistory(String)
       - getHistory()
+    - numPlayers for gametype
 3. Create menu and command line interface
     - runGame() method of Main
     - print methods
