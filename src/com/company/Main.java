@@ -19,6 +19,11 @@ public class Main {
         gameState.getNumPlayers();
         gameState.setNumPlayers(2);
         gameState.getNumPlayers();
+        gameState.addHistoryEntry("play1 wins play 2 loses");
+        gameState.addHistoryEntry("play1 wins play 2 loses");
+        gameState.addHistoryEntry("play1 wins play 2 loses");
+        gameState.addHistoryEntry("play1 wins play 2 loses");
+        gameState.printHistory();
 
     }
 }
