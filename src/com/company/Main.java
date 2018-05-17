@@ -7,5 +7,8 @@ public class Main {
         Player player2 = new Player("Computer");
         System.out.println("player1's name is: " + player1.getName());
         System.out.println("player2's name is: " + player2.getName());
+        player1.setCurrentMove("rock");
+        player2.setCurrentMove("asdf");
+        player2.setCurrentMove("rOCk");
     }
 }
