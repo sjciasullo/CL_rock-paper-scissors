@@ -17,6 +17,7 @@ public class Player {
 
     public void setName(String name) {
         this.name = name;
+        winCount = 0;
     }
 
     public String getCurrentMove(){
