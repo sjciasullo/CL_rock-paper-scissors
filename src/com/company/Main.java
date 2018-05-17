@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -29,7 +31,20 @@ public class Main {
         System.out.println();
 
         // WILL GO IN WHILE LOOP UNTIL INPUT MESSAGE IS "quit"
+        // BEGIN GAME
         printWelcome();
+        Scanner input = new Scanner(System.in);
+        String command = input.next();
+        while(!command.equals("quit")){
+            switch(command){
+                default:
+                    System.out.println("Command not recognized. Returning to menu.\n\n");
+                    break;
+            }
+            printWelcome();
+            command = input.next();
+        }
+        input.close();
 
     }
 
@@ -39,6 +54,6 @@ public class Main {
         System.out.println("=========");
         System.out.println("1. Type 'play' to play");
         System.out.println("2. Type 'history' to view your game history");
-        System.out.println("3. Type 'quit' to stop playing");
+        System.out.println("3. Type 'quit' to stop playing\n");
     }
 }
