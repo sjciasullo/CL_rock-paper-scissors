@@ -30,8 +30,22 @@ public class Main {
 
         System.out.println();
 
-        // WILL GO IN WHILE LOOP UNTIL INPUT MESSAGE IS "quit"
         // BEGIN GAME
+        runGame();
+
+
+    }
+
+    private static void printWelcome(){
+        System.out.println("Welcome to Rock-Paper-Scissors!\n");
+        System.out.println("MAIN MENU");
+        System.out.println("=========");
+        System.out.println("1. Type 'play' to play");
+        System.out.println("2. Type 'history' to view your game history");
+        System.out.println("3. Type 'quit' to stop playing\n");
+    }
+
+    private static void runGame(){
         printWelcome();
         Scanner input = new Scanner(System.in);
         String command = input.next();
@@ -45,15 +59,5 @@ public class Main {
             command = input.next();
         }
         input.close();
-
-    }
-
-    private static void printWelcome(){
-        System.out.println("Welcome to Rock-Paper-Scissors!\n");
-        System.out.println("MAIN MENU");
-        System.out.println("=========");
-        System.out.println("1. Type 'play' to play");
-        System.out.println("2. Type 'history' to view your game history");
-        System.out.println("3. Type 'quit' to stop playing\n");
     }
 }
