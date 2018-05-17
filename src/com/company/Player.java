@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Random;
+
 public class Player {
     private String name;
     private String currentMove;
@@ -46,5 +48,12 @@ public class Player {
 
     public void incrementWins() {
         winCount++;
+    }
+
+    public void makeRandomMove(){
+        Random randGen = new Random();
+        final int RANDOM = randGen.nextInt(3);
+        final String[] MOVES = {"rock", "paper", "scissors"};
+        this.currentMove = MOVES[RANDOM];
     }
 }
