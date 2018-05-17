@@ -28,8 +28,8 @@ public class Player {
         if(isValidMove(move)){
             currentMove = move;
         } else {
-            currentMove = "rock";
-            System.out.println("Invalid move. Your move was set to default.");
+            makeRandomMove();
+            System.out.println("Invalid move entered. You have left your choice up to fate. . .");
         }
     }
 
