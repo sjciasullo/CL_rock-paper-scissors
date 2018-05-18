@@ -58,10 +58,11 @@ public class Player {
     }
 
     // random move for computer and invalid move input
-    public void makeRandomMove(){
+    public String makeRandomMove(){
         Random randGen = new Random();
         final int RANDOM = randGen.nextInt(3);
         final String[] MOVES = {"rock", "paper", "scissors"};
         this.currentMove = MOVES[RANDOM];
+        return MOVES[RANDOM];
     }
 }
