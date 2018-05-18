@@ -61,8 +61,7 @@ public class Main {
             command = command.toLowerCase();
             switch(command){
                 case "play":
-                    System.out.println("\n");
-                    System.out.println("Please enter '1player' or '2player'");
+                    System.out.print("\nPlease enter '1player' or '2player': ");
                     String mode = input.next();
                     boolean nextStep = false;
                     while(!nextStep){
@@ -71,13 +70,13 @@ public class Main {
                             // player's score resets if name is different
                             System.out.print("Enter Player 1's name: ");
                             player1.setName(input.next());
-                            System.out.println("\n");
+                            System.out.println();
 
                             if(mode.equals("2player")){
                                 // Prompt for player2's name
                                 System.out.print("Enter Player 2's name: ");
                                 player2.setName(input.next());
-                                System.out.println("\n");
+                                System.out.println();
                             }
 
                             // Get player's move
@@ -91,6 +90,7 @@ public class Main {
 
                             // if 2 player mode then get player 2's move
                             if(mode.equals("2player")){
+                                System.out.println("|||||||||\n|||||||||\n|||||||||");
                                 printMoveInstructions(player2.getName());
                                 playerMove = input.next();
                                 if(playerMove.equals("quit")){
