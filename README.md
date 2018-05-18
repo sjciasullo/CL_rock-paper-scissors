@@ -33,5 +33,12 @@
     5. execute compiled main
 
 ### Unsolved Problems
+- remove commented out testing
+- initialize players and gamestate in runGame method
+- double check whitespace, reset of player win tallies, and persistence across game modes with different errors in text
 
 ### Wins and Challenges
+-   using debugger to trace error through the stack and method calls
+        - found an error trying to compare strings with == not .equals
+-   getting in too deep to the play part of my game function, had trouble breaking up into smaller components because I wanted to pass by reference into methods so that I could modify the players and gamestates
+-   too huge of a commit in making the play function work had me grinding to make sure I had every detail correct rather than checking small parts of it as I went
