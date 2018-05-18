@@ -28,8 +28,12 @@ public class GameState {
     }
 
     public void printHistory(){
-        for(String entry : history){
-            System.out.println(entry);
+        if(history.isEmpty()){
+            System.out.println("No History yet! Get playing, player!");
+        } else {
+            for(String entry : history){
+                System.out.println(entry);
+            }
         }
     }
 }
