@@ -6,8 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         // TESTING AND NECESSARY COMMANDS FOR GAME RUNNING
-        Player player1 = new Player("Player 1");
-        Player player2 = new Player("Computer");
+        /*
         System.out.println("player1's name is: " + player1.getName());
         System.out.println("player2's name is: " + player2.getName());
         player1.setCurrentMove("rock");
@@ -29,9 +28,15 @@ public class Main {
         gameState.printHistory();
 
         System.out.println();
+        */
+
+        // INITIALIZE PLAYER AND GAMESTATE OBJECTS
+        Player player1 = new Player();
+        Player player2 = new Player();
+        GameState game = new GameState();
 
         // BEGIN GAME
-        runGame();
+        runGame(game, player1, player2);
 
 
     }
@@ -45,7 +50,7 @@ public class Main {
         System.out.println("3. Type 'quit' to stop playing\n");
     }
 
-    private static void runGame(){
+    private static void runGame(GameState game, Player player1, Player player2){
         printWelcome();
         Scanner input = new Scanner(System.in);
         String command = input.next();
