@@ -42,7 +42,7 @@ public class Player {
 
     // checks to see if move is valid
     private boolean isValidMove(String move){
-        if( move == "rock" || move == "paper" || move == "scissors" ){
+        if( move.equals("rock") || move.equals("paper") || move.equals("scissors") ){
             return true;
         } else {
             return false;
