@@ -6,31 +6,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // TESTING AND NECESSARY COMMANDS FOR GAME RUNNING
-        /*
-        System.out.println("player1's name is: " + player1.getName());
-        System.out.println("player2's name is: " + player2.getName());
-        player1.setCurrentMove("rock");
-        player2.setCurrentMove("asdf");
-        player2.setCurrentMove("rOCk"); // false, so handle case sensitivity when it comes in
-        player1.incrementWins();
-        System.out.println("Score is . . .");
-        player1.printWinCount();
-        player2.printWinCount();
-
-        GameState gameState = new GameState(1);
-        gameState.getNumPlayers();
-        gameState.setNumPlayers(2);
-        gameState.getNumPlayers();
-        gameState.addHistoryEntry("play1 wins play 2 loses");
-        gameState.addHistoryEntry("play1 wins play 2 loses");
-        gameState.addHistoryEntry("play1 wins play 2 loses");
-        gameState.addHistoryEntry("play1 wins play 2 loses");
-        gameState.printHistory();
-
-        System.out.println();
-        */
-
         // INITIALIZE PLAYER AND GAMESTATE OBJECTS
         Player player1 = new Player();
         Player player2 = new Player();
@@ -38,8 +13,6 @@ public class Main {
 
         // BEGIN GAME
         runGame(game, player1, player2);
-
-
     }
 
     private static void printWelcome(){
