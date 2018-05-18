@@ -6,13 +6,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // INITIALIZE PLAYER AND GAMESTATE OBJECTS
-        Player player1 = new Player();
-        Player player2 = new Player();
-        GameState game = new GameState();
-
         // BEGIN GAME
-        runGame(game, player1, player2);
+        runGame();
     }
 
     private static void printWelcome(){
@@ -51,7 +46,12 @@ public class Main {
         player2.printWinCount();
     }
 
-    private static void runGame(GameState game, Player player1, Player player2){
+    private static void runGame(){
+        // initialize players and gamestate
+        Player player1 = new Player();
+        Player player2 = new Player();
+        GameState game = new GameState();
+
         printWelcome();
         Scanner input = new Scanner(System.in);
         String command = input.next();
@@ -104,6 +104,7 @@ public class Main {
                             }
 
                             // decide who wins
+                            // 0 for tie, 1 for player1 win, 2 for player2 winr
                             int winnerCode = winDecider(player1.getCurrentMove(), player2.getCurrentMove());
                             if(winnerCode == 0){
                                 System.out.println("The result is a tie! Please play again!");
