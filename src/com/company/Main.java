@@ -89,16 +89,23 @@ public class Main {
             switch(command){
                 case "play":
                     System.out.println("\n");
-                    System.out.println("Please enter '1player' or '2players'");
+                    System.out.println("Please enter '1player' or '2player'");
                     String mode = input.next();
                     boolean nextStep = false;
                     while(!nextStep){
-                        if(mode.equals("1player") || mode.equals("2 player")){
+                        if(mode.equals("1player") || mode.equals("2player")){
                             // Prompt for name
                             // player's score resets if name is different
                             System.out.print("Enter Player 1's name: ");
                             player1.setName(input.next());
                             System.out.println("\n");
+
+                            if(mode.equals("2player")){
+                                // Prompt for player2's name
+                                System.out.print("Enter Player 2's name: ");
+                                player2.setName(input.next());
+                                System.out.println("\n");
+                            }
 
                             // Get player's move
                             printMoveInstructions(player1.getName());
@@ -109,29 +116,45 @@ public class Main {
                                 player1.setCurrentMove(playerMove);
                             }
 
-                            // make random move for player2
-                            System.out.println(player2.getName() + " picks: " + player2.makeRandomMove());
+                            // if 2 player mode then get player 2's move
+                            if(mode.equals("2player")){
+                                printMoveInstructions(player2.getName());
+                                playerMove = input.next();
+                                if(playerMove.equals("quit")){
+                                    break;
+                                } else {
+                                    player2.setCurrentMove(playerMove);
+                                }
+                            } else {
+                                // make random move for player2
+                                System.out.println(player2.getName() + " picks: " + player2.makeRandomMove());
+                            }
 
                             // decide who wins
                             int winnerCode = winDecider(player1.getCurrentMove(), player2.getCurrentMove());
                             if(winnerCode == 0){
                                 System.out.println("The result is a tie! Please play again!");
+                                game.addHistoryEntry(player1.getName() + " ties " + player2.getName() + " with " + playerMove);
                             } else if(winnerCode == 1){
                                 System.out.println(player1.getName() + " is the winner!");
                                 player1.incrementWins();
+                                game.addHistoryEntry(player1.getName() + " wins with " + player1.getCurrentMove() + " against " +
+                                                     player2.getName() + "'s " + player2.getCurrentMove());
                             } else {
                                 System.out.println(player2.getName() + " is the winner!");
                                 player2.incrementWins();
+                                game.addHistoryEntry(player2.getName() + " wins with " + player2.getCurrentMove() + " against " +
+                                        player1.getName() + "'s " + player1.getCurrentMove());
                             }
                             printScore(player1, player2);
-                            nextStep = true;
 
+                            //advances to next game
+                            nextStep = true;
                         } else {
-                            System.out.println("Invalid mode entry. Please try again. '1 player' or '2 player'");
+                            System.out.println("Invalid mode entry. Please try again. '1player' or '2player'");
                             mode = input.next();
                         }
                     }
-
                     break;
                 case "history":
                     game.printHistory();
