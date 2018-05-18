@@ -33,6 +33,7 @@
     5. execute compiled main
 
 ### Unsolved Problems
+- refactor play case of run game function
 
 ### Wins and Challenges
 -   using debugger to trace error through the stack and method calls
