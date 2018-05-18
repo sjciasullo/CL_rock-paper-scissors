@@ -33,7 +33,6 @@
     5. execute compiled main
 
 ### Unsolved Problems
-- initialize players and gamestate in runGame method
 - double check whitespace, reset of player win tallies, and persistence across game modes with different errors in text
 
 ### Wins and Challenges
