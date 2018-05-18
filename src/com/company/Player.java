@@ -7,6 +7,10 @@ public class Player {
     private String currentMove;
     private int winCount = 0;
 
+    public Player(){
+        name = "The Faceless God";
+    }
+
     public Player(String name){
         this.name = name;
     }

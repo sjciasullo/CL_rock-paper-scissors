@@ -6,6 +6,10 @@ public class GameState {
     private int numPlayers = 0; // will be 1 or 2
     private ArrayList<String> history;
 
+    public GameState(){
+        history = new ArrayList<>();
+    }
+
     public GameState(int numPlayers){
         this.numPlayers = numPlayers;
         history = new ArrayList<>();
