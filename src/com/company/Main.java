@@ -55,11 +55,17 @@ public class Main {
         Scanner input = new Scanner(System.in);
         String command = input.next();
         while(!command.equals("quit")){
+            // Handle different menu entries
+            command = command.toLowerCase();
             switch(command){
+                case "history":
+                    game.printHistory();
+                    break;
                 default:
-                    System.out.println("Command not recognized. Returning to menu.\n\n");
+                    System.out.println("-- Command not recognized. Returning to menu.\n\n");
                     break;
             }
+            System.out.println("~~~~~~~~~\n");
             printWelcome();
             command = input.next();
         }
